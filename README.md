@@ -1,14 +1,14 @@
 ## Sitefinity Dev Environment Setup in MAC OS.
-### Environment
+-- Environment
 ``` js
 .Net SDK 6 (6.0.104)
 Mono JIT compiler version 6.12.0.174
 Nuget
 MacOS 12.3 (21E230) ,Apple M1 Pro.
 ```
-### Setup
+-- Setup
 
-# Create Empty Project and change directory to it.
+-- Create Empty Project and change directory to it.
 ``` console
 mkdir SitefinityWebApp
 cd SitefinityWebApp
