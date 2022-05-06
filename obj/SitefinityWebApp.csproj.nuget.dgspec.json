@@ -1,0 +1,91 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj": {}
+  },
+  "projects": {
+    "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj",
+        "projectName": "SitefinityWebApp",
+        "projectPath": "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj",
+        "packagesPath": "/Users/yora/.nuget/packages/",
+        "outputPath": "/Users/yora/askyora/sitefinity/SitefinityWebApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/yora/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "http://nuget.sitefinity.com/nuget": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.sitefinity.com/nuget": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Progress.Sitefinity.AspNetCore": {
+              "target": "Package",
+              "version": "[14.1.7823.27, )"
+            },
+            "Progress.Sitefinity.AspNetCore.FormWidgets": {
+              "target": "Package",
+              "version": "[14.1.7823.27, )"
+            },
+            "Progress.Sitefinity.AspNetCore.Widgets": {
+              "target": "Package",
+              "version": "[14.1.7823.27, )"
+            },
+            "Progress.Sitefinity.Renderer": {
+              "target": "Package",
+              "version": "[14.1.7823.27, )"
+            },
+            "Progress.Sitefinity.RestSdk": {
+              "target": "Package",
+              "version": "[14.1.7823.27, )"
+            },
+            "Telerik.Sitefinity.Mvc": {
+              "target": "Package",
+              "version": "[14.1.7823, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/6.0.104/libexec/sdk/6.0.104/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
