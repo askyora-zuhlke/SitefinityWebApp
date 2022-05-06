@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj": {}
+    "/Users/yora/Documents/GitHub/SitefinityWebApp/SitefinityWebApp.csproj": {}
   },
   "projects": {
-    "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj": {
+    "/Users/yora/Documents/GitHub/SitefinityWebApp/SitefinityWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj",
+        "projectUniqueName": "/Users/yora/Documents/GitHub/SitefinityWebApp/SitefinityWebApp.csproj",
         "projectName": "SitefinityWebApp",
-        "projectPath": "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj",
+        "projectPath": "/Users/yora/Documents/GitHub/SitefinityWebApp/SitefinityWebApp.csproj",
         "packagesPath": "/Users/yora/.nuget/packages/",
-        "outputPath": "/Users/yora/askyora/sitefinity/SitefinityWebApp/obj/",
+        "outputPath": "/Users/yora/Documents/GitHub/SitefinityWebApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/yora/.nuget/NuGet/NuGet.Config"

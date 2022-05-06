@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LPiY7UlnJZFkVgzO53oo7o9HCDp9DndELJO/8BpwthTfNKw2gYkp4j7mLj760f9DKLKPqu9ggaiYY7iI0T5UaQ==",
+  "dgSpecHash": "ut80PPYAn3Vzc68TLFomsw3oDWRroRiEuX7KgyoBjhD5j7t0M3AgAS1Kdx0bBrV9ABIUl/DKytrB9mWOO6Y8hw==",
   "success": true,
-  "projectFilePath": "/Users/yora/askyora/sitefinity/SitefinityWebApp/SitefinityWebApp.csproj",
+  "projectFilePath": "/Users/yora/Documents/GitHub/SitefinityWebApp/SitefinityWebApp.csproj",
   "expectedPackageFiles": [
     "/Users/yora/.nuget/packages/anglesharp/0.14.0/anglesharp.0.14.0.nupkg.sha512",
     "/Users/yora/.nuget/packages/anglesharp.css/0.14.2/anglesharp.css.0.14.2.nupkg.sha512",

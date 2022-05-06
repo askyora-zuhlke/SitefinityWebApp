@@ -8,13 +8,13 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SitefinityWebApp
 build_property.RootNamespace = SitefinityWebApp
-build_property.ProjectDir = /Users/yora/askyora/sitefinity/SitefinityWebApp/
+build_property.ProjectDir = /Users/yora/Documents/GitHub/SitefinityWebApp/
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/yora/askyora/sitefinity/SitefinityWebApp
+build_property.MSBuildProjectDirectory = /Users/yora/Documents/GitHub/SitefinityWebApp
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/yora/askyora/sitefinity/SitefinityWebApp/Views/Shared/Components/HelloWorld/Default.cshtml]
+[/Users/yora/Documents/GitHub/SitefinityWebApp/Views/Shared/Components/HelloWorld/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0NvbXBvbmVudHMvSGVsbG9Xb3JsZC9EZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
