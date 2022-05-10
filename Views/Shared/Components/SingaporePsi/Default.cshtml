@@ -1,0 +1,30 @@
+@using ServiceStack
+@using SitefinityWeb.Entities;
+
+@model SitefinityWebApp.Dto.Psi
+<h4>Singapore Air Quality</h4>
+<table>
+    <tr>
+        <td>&nbsp;&nbsp;&nbsp;</td>
+        <td>West&nbsp;</td>
+        <td>National&nbsp;</td>
+        <td>East&nbsp;</td>
+        <td>Central&nbsp;</td>
+        <td>South&nbsp;</td>
+        <td>North&nbsp;</td>
+    </tr>
+    <tbody>
+    <tr>
+        @for (var i = 0; i < @Model.Items.Length; i++)
+        {
+            <td>PSI 24 Hourly&nbsp;&nbsp;&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].West&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].National&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].East&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].Central&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].South&nbsp;</td>
+            <td>@Model.Items[i].Readings["psi_twenty_four_hourly"].North&nbsp;</td>
+        }
+    </tr>
+    </tbody>
+</table>
