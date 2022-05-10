@@ -1,4 +1,4 @@
-namespace SitefinityWeb.Entities.HelloWorld
+namespace SitefinityWeb.Entities
 {
 
     public class HelloWorldEntity
