@@ -1,22 +1,5 @@
 
 .DS_Store
 bin/**/**
-obj/**
+obj/**/**
 *.dll
-obj/Debug/net6.0/ref/SitefinityWebApp.dll
-obj/Debug/net6.0/SitefinityWebApp.assets.cache
-obj/Debug/net6.0/SitefinityWebApp.csproj.CoreCompileInputs.cache
-obj/Debug/net6.0/SitefinityWebApp.csproj.FileListAbsolute.txt
-obj/Debug/net6.0/SitefinityWebApp.dll
-obj/Debug/net6.0/SitefinityWebApp.GeneratedMSBuildEditorConfig.editorconfig
-obj/Debug/net6.0/SitefinityWebApp.genruntimeconfig.cache
-obj/Debug/net6.0/SitefinityWebApp.pdb
-obj/project.assets.json
-obj/project.nuget.cache
-obj/SitefinityWebApp.csproj.nuget.dgspec.json
-obj/staticwebassets.pack.sentinel
-obj/Debug/net6.0/SitefinityWebApp.pdb
-obj/project.assets.json
-obj/project.nuget.cache
-obj/SitefinityWebApp.csproj.nuget.dgspec.json
-obj/staticwebassets.pack.sentinel
