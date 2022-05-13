@@ -17,6 +17,24 @@ cd SitefinityWebApp
 ``` console
 dotnet new web
 ```
+-- add Sitefinity NuGet Repository
+Add a new source, name it Sitefinity NuGet Repository.
+``` console
+sudo dotnet nuget add source https://nuget.sitefinity.com/nuget -n sitefinity
+```
+
+-- Fix the NuGet.Config as below.(Sitefinity as first package source) /Users/<username>/.nuget/NuGet
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="sitefinity" value="https://nuget.sitefinity.com/nuget" />
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+</configuration>
+```
+
+
 -- Add Dependancies.
 ``` console
 dotnet add package Progress.Sitefinity.AspNetCore
@@ -25,7 +43,7 @@ dotnet add package Progress.Sitefinity.Renderer
 dotnet add package Progress.Sitefinity.AspNetCore.FormWidgets
 dotnet add package Telerik.Sitefinity.Mvc
 ```
--- Open VS code 
+-- Open VS code
 ```
 code .
 ```
@@ -84,4 +102,4 @@ app.Run();
   "WebServicePath":"api/default"  
   }  
 }
-``` 
+```
