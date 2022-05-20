@@ -1,0 +1,40 @@
+@model SitefinityWebApp.QuestionsDto.QuestionsDto
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js" ></script>
+<script>
+function check(chkname,btn) {
+      if($("input[name="+chkname+"]:checked").attr("prop-val")){
+           $("#qus"+btn.id).hide();
+           $("#qus"+(Number.parseInt(btn.id)+1)).show();
+           
+      }else{
+            alert("Incorrect answer ! please retry.");
+     }
+  }
+</script>
+<div class="container-fluid">
+     @for (var i = 0; i < @Model.QuestionList.Count; i++)
+        {
+            <div id="@Html.Raw("qus"+i)" data-sf-role="separator" @Html.Raw(i==0?"":"style='display: none'")>
+                <fieldset class="my-3" data-sf-role="multiple-choice-field-container">
+                    <legend class="form-label fs-6" id="RadioGroupLabel-1">@Model.QuestionList[i].Title</legend>
+                    <ul class="list-inline">
+                        @for (var a = 0; a < @Model.QuestionList[i].Answers.AnswerList.Count; a++)
+                        {
+                            <li class="form-check form-check-inline">
+                                <label for="MultipleChoiceFieldController_@Model.QuestionList[i].Answers.AnswerList[a].Id" class="form-check-label">
+                                    @Model.QuestionList[i].Answers.AnswerList[a].Title
+                                </label>
+                                <input id="MultipleChoiceFieldController_@Model.QuestionList[i].Answers.AnswerList[a].Id" type="radio" @Html.Raw(@Model.QuestionList[i].Answers.AnswerList[a].IsCorrectAnswer ? "prop-val=true":"prop-val=false")  name="@Model.QuestionList[i].Id" value="@Model.QuestionList[i].Answers.AnswerList[a].Title" class="form-check-input" data-sf-role="multiple-choice-field-input" required="required">
+                            </li>
+                        }
+                    </ul>
+                </fieldset>
+               
+                <div class="my-3">
+                    <button id="@Html.Raw(i)" data-sf-btn-role="next" type="button" class="btn btn-secondary" onclick="check('@Model.QuestionList[i].Id',this);"
+                    @Html.Raw(i >= @Model.QuestionList.Count ?"disabled=disabled":"")>Next</button>
+                </div>
+            </div>
+        }
+</div>

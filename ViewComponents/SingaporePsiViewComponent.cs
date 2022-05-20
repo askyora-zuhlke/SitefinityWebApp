@@ -1,47 +1,44 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Progress.Sitefinity.AspNetCore.ViewComponents;
-using ServiceStack.Text;
 using SitefinityWebApp.Dto;
 
-namespace SitefinityWeb.ViewComponents;
-
-[SitefinityWidget]
-public class SingaporePsiViewComponent : ViewComponent
+namespace SitefinityWeb.ViewComponents
 {
 
-    private static readonly HttpClient client = new HttpClient();
-
-    private static Psi psi;
-
-    private static DateTime lastUpdated;
-   
-
-    // Invokes the view.
-    public IViewComponentResult Invoke(IViewComponentContext<Psi> context)
+    [SitefinityWidget]
+    public class SingaporePsiViewComponent : ViewComponent
     {
-        if (context == null)
-        {
-            throw new ArgumentNullException(nameof(context));
-        }
-        getAndReplacePsiObject();
+        private static readonly HttpClient client = new HttpClient();
+        private static Psi psi;
+        private static DateTime lastUpdated;
 
-        return this.View(psi);
-    }
 
-    private void getAndReplacePsiObject()
-    {
-        long elapsedTicks = SystemTime.Now.Ticks - lastUpdated.Ticks;
-        TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
-        
-        if (psi == null || lastUpdated == null || elapsedSpan.Seconds >= 10 )
+        // Invokes the view.
+        public IViewComponentResult Invoke(IViewComponentContext<Psi> context)
         {
-            String jsonString = client.GetStringAsync("https://api.data.gov.sg/v1/environment/psi").Result;
-            if (jsonString != null)
+            if (context == null)
             {
-                psi = JsonConvert.DeserializeObject<Psi>(jsonString);
-                lastUpdated = SystemTime.Now;
-                Console.WriteLine("Updated : "+lastUpdated.ToString());
+                throw new ArgumentNullException(nameof(context));
+            }
+
+            getAndReplacePsiObject();
+            return this.View(psi);
+        }
+
+        private void getAndReplacePsiObject()
+        {
+            long elapsedTicks = DateTime.Now.Ticks - lastUpdated.Ticks;
+            TimeSpan elapsedSpan = new TimeSpan(elapsedTicks);
+
+            if (psi == null || lastUpdated == null || elapsedSpan.Seconds >= 60)
+            {
+                String jsonString = client.GetStringAsync("https://api.data.gov.sg/v1/environment/psi").Result;
+                if (jsonString != null)
+                {
+                    psi = JsonConvert.DeserializeObject<Psi>(jsonString);
+                    lastUpdated = DateTime.Now;
+                }
             }
         }
     }

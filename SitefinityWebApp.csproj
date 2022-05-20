@@ -20,8 +20,9 @@
     <PackageReference Include="System.Net.Http" Version="4.3.4" />
     <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
     <PackageReference Include="System.Net.Requests" Version="4.3.0" />
-    <PackageReference Include="Telerik.Sitefinity.Core" Version="14.1.7823" />
-    <PackageReference Include="Telerik.Sitefinity.Mvc" Version="14.1.7823" />
+    <PackageReference Include="System.Private.ServiceModel" Version="4.9.0" />
+    <PackageReference Include="System.ServiceModel.Primitives" Version="4.9.0" />
+    <PackageReference Include="SystemTime" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

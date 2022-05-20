@@ -3,3 +3,9 @@
 bin/**/**
 obj/**/**
 *.dll
+.idea/.idea.SitefinityWebApp.dir/.idea/indexLayout.xml
+.idea/.idea.SitefinityWebApp.dir/.idea/vcs.xml
+obj/Debug/net6.0/apphost
+obj/Debug/net6.0/ref/SitefinityWebApp.dll
+*.cache
+obj/Debug/net6.0/apphost
