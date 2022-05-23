@@ -8,13 +8,15 @@ using Value = SitefinityWebApp.QuestionsDto.Question;
 namespace SitefinityWeb.ViewComponents
 {
 
+   
+    
     [SitefinityWidget(Title = "Random Quiz Widget")]
     [ViewComponent(Name = "RandomQuiz")]
     public class RandomQuizViewComponent : ViewComponent
     {
         private static readonly HttpClient client = new HttpClient();
         private static QuestionsDto questions;
-
+        public static string appUrl = "https://localhost:8080";
         // Invokes the view.
         public IViewComponentResult Invoke(IViewComponentContext<QuestionsDto> context)
         {
@@ -28,7 +30,7 @@ namespace SitefinityWeb.ViewComponents
 
         private void getQuestions(int randomSize)
         {
-            String jsonString = client.GetStringAsync("https://localhost:8080/api/default/quizquestions?$select=Id,Title,parentId").Result;
+            String jsonString = client.GetStringAsync(appUrl+"/api/default/quizquestions?$select=Id,Title,parentId").Result;
                 if (jsonString != null)
                 {
                     questions = JsonConvert.DeserializeObject<QuestionsDto>(jsonString);
@@ -42,7 +44,7 @@ namespace SitefinityWeb.ViewComponents
         {
             for (var index=0;index<questionItems.Count;index++) {
                 String jsonString = client
-                    .GetStringAsync("https://localhost:8080/api/default/quizquestionoptions?$select=TItle,IsCorrectAnswer,Id,ParentId&$filter=ParentId eq "+questionItems[index].Id)
+                    .GetStringAsync(appUrl+"/api/default/quizquestionoptions?$select=TItle,IsCorrectAnswer,Id,ParentId,Description&$expand=image($select=Id,Url)&$filter=ParentId eq "+questionItems[index].Id)
                     .Result;
                 if (jsonString != null)
                 {
@@ -58,14 +60,18 @@ namespace SitefinityWeb.ViewComponents
         {
             ICollection<Question> valueItems = new HashSet<Question>();
             Random random = new Random();
+
+            Console.WriteLine( "maxQuestions: "+maxQuestions.ToString());
             while (valueItems.Count < maxQuestions)
             {
-                int index = random.Next(0, questions.QuestionList.Count - 1);
+                int index = random.Next(0, questions.QuestionList.Count);
                 if (!valueItems.Contains(questions.QuestionList[index]))
                 {
                     valueItems.Add(questions.QuestionList[index]);
                 }
             }
+            
+            Console.WriteLine( "valueItems.Count: "+valueItems.Count);
             return valueItems;
         }
     }
