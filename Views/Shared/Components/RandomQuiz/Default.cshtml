@@ -9,7 +9,7 @@
            $("#qus-"+this.id).hide();
            var isCorrect = $("input[type='radio'][name='rad-q-"+this.id+"']:checked").attr("prop-val");
            if (isCorrect==undefined){
-               $("#display-info-answer-"+this.id).text('Skiped.');
+               $("#display-info-answer-"+this.id).text('Skipped.');
            }else if (isCorrect=="true"){
                 $("#display-info-answer-"+this.id).text('Correct.');
            }else{
